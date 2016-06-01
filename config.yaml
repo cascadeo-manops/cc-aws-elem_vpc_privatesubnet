@@ -1,1 +1,14 @@
-variables: {}
+variables: 
+   CC-AWS-ELEM_VPC_PRIVATESUBNET_RTNAME:
+      required: false
+      description: The private subnet route table
+      default: 'cc-default_vpc-default_private_subnet-rt'
+   CC-AWS-ELEM_VPC_PRIVATESUBNET_NAME:
+      required: false
+      description: The private subnet
+      default: 'cc-default_vpc-default_private_subnet'
+   CC-AWS-ELEM_VPC_NAME:
+      required: false
+      description: The VPC
+      default: 'cc-default_vpc'
+
