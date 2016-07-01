@@ -10,16 +10,16 @@
 ##   internet_gateway true
 ## end
 ##
-coreo_aws_vpc_routetable "${CC-AWS-ELEM_VPC_PRIVATESUBNET_RTNAME}" do
+coreo_aws_vpc_routetable "${PRIVATESUBNET_RTNAME}" do
    action :create
-   vpc "${CC-AWS-ELEM_VPC_NAME}"
+   vpc "${VPC_NAME}"
    number_of_tables 3
 end
 
-coreo_aws_vpc_subnet "${CC-AWS-ELEM_VPC_PRIVATESUBNET_NAME}" do
+coreo_aws_vpc_subnet "${PRIVATESUBNET_NAME}" do
    action :sustain
    number_of_zones 3
    percent_of_vpc_allocated 50
-   route_table "${CC-AWS-ELEM_VPC_PRIVATESUBNET_RTNAME}"
-   vpc "${CC-AWS_ELEM_VPC_NAME}"
+   route_table "${PRIVATESUBNET_RTNAME}"
+   vpc "${VPC_NAME}"
 end
